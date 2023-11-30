@@ -1,6 +1,18 @@
 require 'rake'
+require 'rake/testtask'
 require 'fileutils'
 require 'erb'
+
+task :test do
+  Rake::TestTask.new do |t|
+    t.libs << "src"
+    t.warning = true
+    t.verbose = true
+
+    t.pattern = 'src/**/*.rb'
+  end
+
+end
 
 desc "Clone template for the next day's challenge"
 task :next_day do

@@ -22,6 +22,12 @@ To demonstrate with the sample input for Day 1:
 ruby src/day1/solution.rb -n test_sample
 ```
 
+## Run all examples
+
+```bash
+rake test
+```
+
 ## Create next day's files
 
 ```bash
