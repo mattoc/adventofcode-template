@@ -14,10 +14,16 @@ Dependencies are kept to a minimum:
 
 To solve for Day 1:
 ```bash
-ruby src/day1/solution.rb.erb
+ruby src/day1/solution.rb
 ```
 
 To demonstrate with the sample input for Day 1:
 ```bash
-ruby src/day1/solution.rb.erb -n test_sample
+ruby src/day1/solution.rb -n test_sample
+```
+
+## Create next day's files
+
+```bash
+rake next_day
 ```
