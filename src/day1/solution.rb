@@ -3,34 +3,18 @@ require 'minitest/autorun'
 require_relative '../../lib/solution_base'
 
 class SolutionTest < Minitest::Test
+  make_my_diffs_pretty!
+
   def setup
     @solution = Day1::Solution.new
   end
 
   def test_sample
-    # Redirect stdout to capture the output for testing
-    output = StringIO.new
-    $stdout = output
-
-    @solution.sample
-
-    # Reset stdout
-    $stdout = STDOUT
-
-    expected_output = "Loaded sample input:\n"
-    assert output.string.start_with?(expected_output)
+    assert_output(/Loaded sample input:/) { @solution.sample }
   end
 
   def test_part_one
-    output = StringIO.new
-    $stdout = output
-
-    @solution.part_one
-
-    $stdout = STDOUT
-
-    expected_output = "Loaded actual input:\n"
-    assert output.string.start_with?(expected_output)
+    assert_output(/Loaded actual input:/) { @solution.part_one }
   end
 
   def test_part_two
